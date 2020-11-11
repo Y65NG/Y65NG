@@ -24,15 +24,15 @@
     var CONFIG = {"hostname":"feifany65ng.top","root":"/","images":"/images","scheme":"Mist","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 
-  <meta name="description" content="2017 Silver January p2题目Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数 思路将 FJ 每次出的手势装进一个 prefix 数组中，数组的每个元素是当前 FJ 出过三个手势分别的次数。遍历装 FJ 手势的数组，计">
+  <meta name="description" content="题目Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数 思路将 FJ 每次出的手势装进一个 prefix 数组中，数组的每个元素是当前 FJ 出过三个手势分别的次数。遍历装 FJ 手势的数组，计算每次 Bessie 赢的次数，并求出最大值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Yang&#39;s Website">
+<meta property="og:title" content="2017 Silver January p2">
 <meta property="og:url" content="http://feifany65ng.top/2020/11/11/2017%20Silver%20January%20p2/index.html">
 <meta property="og:site_name" content="Yang&#39;s Website">
-<meta property="og:description" content="2017 Silver January p2题目Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数 思路将 FJ 每次出的手势装进一个 prefix 数组中，数组的每个元素是当前 FJ 出过三个手势分别的次数。遍历装 FJ 手势的数组，计">
+<meta property="og:description" content="题目Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数 思路将 FJ 每次出的手势装进一个 prefix 数组中，数组的每个元素是当前 FJ 出过三个手势分别的次数。遍历装 FJ 手势的数组，计算每次 Bessie 赢的次数，并求出最大值">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-11-11T10:33:55.544Z">
-<meta property="article:modified_time" content="2020-11-10T09:05:09.214Z">
+<meta property="article:modified_time" content="2020-11-11T10:36:54.903Z">
 <meta property="article:author" content="Daniel Yang">
 <meta name="twitter:card" content="summary">
 
@@ -50,7 +50,7 @@
   };
 </script>
 
-  <title> | Yang's Website</title>
+  <title>2017 Silver January p2 | Yang's Website</title>
   
 
 
@@ -173,7 +173,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-Silver-January-p2"><span class="nav-number">1.</span> <span class="nav-text">2017 Silver January p2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">1.3.</span> <span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.4.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -186,9 +186,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
       </div>
   </nav>
 </div>
@@ -241,7 +245,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          2017 Silver January p2
         </h1>
 
         <div class="post-meta-container">
@@ -251,16 +255,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2020-11-11 18:33:55" itemprop="dateCreated datePublished" datetime="2020-11-11T18:33:55+08:00">2020-11-11</time>
+      <time title="Created: 2020-11-11 18:33:55 / Modified: 18:36:54" itemprop="dateCreated datePublished" datetime="2020-11-11T18:33:55+08:00">2020-11-11</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 17:05:09" itemprop="dateModified" datetime="2020-11-10T17:05:09+08:00">2020-11-10</time>
-      </span>
 
   
 </div>
@@ -272,7 +270,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="2017-Silver-January-p2"><a href="#2017-Silver-January-p2" class="headerlink" title="2017 Silver January p2"></a>2017 Silver January p2</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数</p>
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>将 FJ 每次出的手势装进一个 prefix 数组中，数组的每个元素是当前 FJ 出过三个手势分别的次数。遍历装 FJ 手势的数组，计算每次 Bessie 赢的次数，并求出最大值</p>
 <h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>创建一个 prefix 数组的复杂度为 $O(n)$，遍历数组的复杂度为 $O(n)$，利用 prefix 计算赢的次数的复杂度为 $O(1)$，总复杂度为 $O(n)$，$n$ 最大为 100000，不会超时</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">win</span>(<span class="params">a, b, i</span>):</span></span><br><span class="line">	<span class="keyword">global</span> gestures, prefix</span><br><span class="line"></span><br><span class="line">	count = <span class="number">0</span></span><br><span class="line">	count += prefix[i][a] + prefix[<span class="number">-1</span>][b] - prefix[i][b]</span><br><span class="line">	<span class="keyword">return</span> count</span><br><span class="line"></span><br><span class="line">lines = <span class="built_in">open</span>(<span class="string">&#x27;hps.in&#x27;</span>).read().strip().split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">n = <span class="built_in">int</span>(lines[<span class="number">0</span>])</span><br><span class="line">gestures = lines[<span class="number">1</span>:]</span><br><span class="line">prefix = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">	<span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">		<span class="keyword">if</span> gestures[i] == <span class="string">&#x27;H&#x27;</span>: prefix.append((<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">		<span class="keyword">elif</span> gestures[i] == <span class="string">&#x27;P&#x27;</span>: prefix.append((<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line">		<span class="keyword">else</span>: prefix.append((<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>))</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		h = prefix[i - <span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">		p = prefix[i - <span class="number">1</span>][<span class="number">1</span>]</span><br><span class="line">		s = prefix[i - <span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line">		<span class="keyword">if</span> gestures[i] == <span class="string">&#x27;H&#x27;</span>: prefix.append((h + <span class="number">1</span>, p, s))</span><br><span class="line">		<span class="keyword">elif</span> gestures[i] == <span class="string">&#x27;P&#x27;</span>: prefix.append((h, p + <span class="number">1</span>, s))</span><br><span class="line">		<span class="keyword">else</span>: prefix.append((h, p, s + <span class="number">1</span>))</span><br><span class="line"><span class="comment"># print(gestures, prefix)</span></span><br><span class="line"></span><br><span class="line">max_count = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">	count = <span class="built_in">max</span>(win(<span class="number">0</span>, <span class="number">1</span>, i), win(<span class="number">0</span>, <span class="number">2</span>, i), win(<span class="number">1</span>, <span class="number">0</span>, i), win(<span class="number">1</span>, <span class="number">2</span>, i), win(<span class="number">2</span>, <span class="number">0</span>, i), win(<span class="number">2</span>, <span class="number">1</span>, i))</span><br><span class="line">	max_count = <span class="built_in">max</span>(max_count, count)</span><br><span class="line">	</span><br><span class="line">print(max_count)</span><br><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;hps.out&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">file.write(<span class="built_in">str</span>(max_count))</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
@@ -288,13 +286,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/11/11/2017%20Bronze%20December%20p3/" rel="prev" title="">
-                  <i class="fa fa-chevron-left"></i> 
+                <a href="/2020/11/11/2017%20Bronze%20December%20p3/" rel="prev" title="2017 Bronze December p3">
+                  <i class="fa fa-chevron-left"></i> 2017 Bronze December p3
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/11/11/2018%20Bronze%20February%20p2/" rel="next" title="">
-                   <i class="fa fa-chevron-right"></i>
+                <a href="/2020/11/11/2018%20Bronze%20February%20p2/" rel="next" title="2018 Bronze February p2">
+                  2018 Bronze February p2 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
