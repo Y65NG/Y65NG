@@ -32,7 +32,7 @@
 <meta property="og:description" content="题目给出 N 个草垛的坐标以及能用的奶牛数量 K，要求得出只用 K 只奶牛能炸完所有草垛的奶牛最小爆炸半径。 思路由于爆炸半径大于等于最小爆炸半径就一定能炸完所有草垛，小于就一定炸不完，所以可以用二分查找法来找到最小半径。 复杂度分析在 n 个元素中用二分查找法找到某个元素的复杂度为O(logn)，每次选择一个元素后检查是否合法的复杂度为 O(n)，因此整个二分法的复杂度为O(n logn)。K">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-11-11T10:33:55.537Z">
-<meta property="article:modified_time" content="2020-11-11T10:39:35.385Z">
+<meta property="article:modified_time" content="2020-11-12T12:00:03.801Z">
 <meta property="article:author" content="Daniel Yang">
 <meta name="twitter:card" content="summary">
 
@@ -133,9 +133,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
 
   </li>
   </ul>
@@ -186,8 +196,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span>
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>
 </div>
@@ -250,9 +262,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2020-11-11 18:33:55 / Modified: 18:39:35" itemprop="dateCreated datePublished" datetime="2020-11-11T18:33:55+08:00">2020-11-11</time>
+      <time title="Created: 2020-11-11 18:33:55" itemprop="dateCreated datePublished" datetime="2020-11-11T18:33:55+08:00">2020-11-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-11-12 20:00:03" itemprop="dateModified" datetime="2020-11-12T20:00:03+08:00">2020-11-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS/USACO/" itemprop="url" rel="index"><span itemprop="name">USACO</span></a>
+        </span>
     </span>
 
   

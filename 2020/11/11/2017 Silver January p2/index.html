@@ -32,7 +32,7 @@
 <meta property="og:description" content="题目Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数 思路将 FJ 每次出的手势装进一个 prefix 数组中，数组的每个元素是当前 FJ 出过三个手势分别的次数。遍历装 FJ 手势的数组，计算每次 Bessie 赢的次数，并求出最大值">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-11-11T10:33:55.544Z">
-<meta property="article:modified_time" content="2020-11-11T10:36:54.903Z">
+<meta property="article:modified_time" content="2020-11-12T11:59:50.872Z">
 <meta property="article:author" content="Daniel Yang">
 <meta name="twitter:card" content="summary">
 
@@ -133,9 +133,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
 
   </li>
   </ul>
@@ -186,8 +196,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span>
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>
 </div>
@@ -250,9 +262,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2020-11-11 18:33:55 / Modified: 18:36:54" itemprop="dateCreated datePublished" datetime="2020-11-11T18:33:55+08:00">2020-11-11</time>
+      <time title="Created: 2020-11-11 18:33:55" itemprop="dateCreated datePublished" datetime="2020-11-11T18:33:55+08:00">2020-11-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-11-12 19:59:50" itemprop="dateModified" datetime="2020-11-12T19:59:50+08:00">2020-11-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS/USACO/" itemprop="url" rel="index"><span itemprop="name">USACO</span></a>
+        </span>
     </span>
 
   
