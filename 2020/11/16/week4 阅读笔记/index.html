@@ -40,18 +40,20 @@
     var CONFIG = {"hostname":"www.affu.xyz","root":"/","images":"/images","scheme":"Mist","version":"8.0.2","exturl":false,"sidebar":{"position":"left","width":200,"display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tages">
-<meta property="og:url" content="http://www.affu.xyz/tages/index.html">
+  <meta name="description" content="Mining Bitcoin with pencil and paper: 0.67 hashes per dayThis article introduces the process how mining works in Bitcoin, which requires miners to find a hash smaller than a specific value. The author">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week4 Note">
+<meta property="og:url" content="http://www.affu.xyz/2020/11/16/week4%20%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Yang&#39;s Website">
+<meta property="og:description" content="Mining Bitcoin with pencil and paper: 0.67 hashes per dayThis article introduces the process how mining works in Bitcoin, which requires miners to find a hash smaller than a specific value. The author">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-11-12T11:54:51.000Z">
-<meta property="article:modified_time" content="2020-11-12T11:54:52.002Z">
+<meta property="article:published_time" content="2020-11-16T10:29:20.882Z">
+<meta property="article:modified_time" content="2020-11-16T10:29:20.851Z">
 <meta property="article:author" content="Daniel Yang">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.affu.xyz/tages/">
+<link rel="canonical" href="http://www.affu.xyz/2020/11/16/week4%20%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">
 
 
 <script class="page-configurations">
@@ -59,13 +61,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>tages | Yang's Website
-</title>
+  <title>Week4 Note | Yang's Website</title>
   
 
 
@@ -175,7 +176,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -188,6 +189,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mining-Bitcoin-with-pencil-and-paper-0-67-hashes-per-day"><span class="nav-number">1.</span> <span class="nav-text">Mining Bitcoin with pencil and paper: 0.67 hashes per day</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ViaBTC-Rises-How-A-mysterious-Miner-Could-Decide-Bitcoin%E2%80%99s-Future"><span class="nav-number">2.</span> <span class="nav-text">ViaBTC Rises: How A mysterious Miner Could Decide Bitcoin’s Future</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Antbleed-Backdoor"><span class="nav-number">3.</span> <span class="nav-text">The Antbleed Backdoor</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -235,44 +237,99 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
       
-  
-  
 
       
 
-    
-    
-    
-    <div class="post-block" lang="zh-Hans">
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://www.affu.xyz/2020/11/16/week4%20%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Daniel Yang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yang's Website">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Week4 Note
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">tages
-</h1>
+        <div class="post-meta-container">
+          
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-<div class="post-meta-container">
+      <time title="Created: 2020-11-16 18:29:20" itemprop="dateCreated datePublished" datetime="2020-11-16T18:29:20+08:00">2020-11-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS/Bitcoin/" itemprop="url" rel="index"><span itemprop="name">Bitcoin</span></a>
+        </span>
+    </span>
+
   
-
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="Mining-Bitcoin-with-pencil-and-paper-0-67-hashes-per-day"><a href="#Mining-Bitcoin-with-pencil-and-paper-0-67-hashes-per-day" class="headerlink" title="Mining Bitcoin with pencil and paper: 0.67 hashes per day"></a>Mining Bitcoin with pencil and paper: 0.67 hashes per day</h3><p>This article introduces the process how mining works in Bitcoin, which requires miners to find a hash smaller than a specific value. The author also shows the process calculating SHA-256, one of the hash functions, using pen and paper.</p>
+<h3 id="ViaBTC-Rises-How-A-mysterious-Miner-Could-Decide-Bitcoin’s-Future"><a href="#ViaBTC-Rises-How-A-mysterious-Miner-Could-Decide-Bitcoin’s-Future" class="headerlink" title="ViaBTC Rises: How A mysterious Miner Could Decide Bitcoin’s Future"></a>ViaBTC Rises: How A mysterious Miner Could Decide Bitcoin’s Future</h3><p>This article introduces a bitcoin mining pool in China called ViaBTC became to support Bitcoin Unlimited instead of Bitcoin Core. There are two ways that are possible to scale the bitcoin block size: Segregated Witness and Bitcoin Unlimited. Segregated Witness is a planned technical fix that would make bitcoin’s block size about 1.8 times larger than original size, while Bitcoin Unlimited allows miners and individual node operator to choose a block size that they prefer instead of limited block size. Either side has its supporters and have continued arguing.</p>
+<h3 id="The-Antbleed-Backdoor"><a href="#The-Antbleed-Backdoor" class="headerlink" title="The Antbleed Backdoor"></a>The Antbleed Backdoor</h3>
     </div>
-    
 
     
     
     
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/13/Welcome-to-Yang-s-Website/" rel="prev" title="Welcome to Yang's Website">
+                  <i class="fa fa-chevron-left"></i> Welcome to Yang's Website
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
       

@@ -7,6 +7,17 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Week4 Note</title>
+    <url>/2020/11/16/week4%20%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="Mining-Bitcoin-with-pencil-and-paper-0-67-hashes-per-day"><a href="#Mining-Bitcoin-with-pencil-and-paper-0-67-hashes-per-day" class="headerlink" title="Mining Bitcoin with pencil and paper: 0.67 hashes per day"></a>Mining Bitcoin with pencil and paper: 0.67 hashes per day</h3><p>This article introduces the process how mining works in Bitcoin, which requires miners to find a hash smaller than a specific value. The author also shows the process calculating SHA-256, one of the hash functions, using pen and paper.</p>
+<h3 id="ViaBTC-Rises-How-A-mysterious-Miner-Could-Decide-Bitcoin’s-Future"><a href="#ViaBTC-Rises-How-A-mysterious-Miner-Could-Decide-Bitcoin’s-Future" class="headerlink" title="ViaBTC Rises: How A mysterious Miner Could Decide Bitcoin’s Future"></a>ViaBTC Rises: How A mysterious Miner Could Decide Bitcoin’s Future</h3><p>This article introduces a bitcoin mining pool in China called ViaBTC became to support Bitcoin Unlimited instead of Bitcoin Core. There are two ways that are possible to scale the bitcoin block size: Segregated Witness and Bitcoin Unlimited. Segregated Witness is a planned technical fix that would make bitcoin’s block size about 1.8 times larger than original size, while Bitcoin Unlimited allows miners and individual node operator to choose a block size that they prefer instead of limited block size. Either side has its supporters and have continued arguing.</p>
+<h3 id="The-Antbleed-Backdoor"><a href="#The-Antbleed-Backdoor" class="headerlink" title="The Antbleed Backdoor"></a>The Antbleed Backdoor</h3>]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Bitcoin</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2018 Bronze February p3</title>
     <url>/2020/11/11/2018%20Bronze%20February%20p3/</url>
     <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>John 有一个计数器，记录从某次越狱开始每天距离上次奶牛越狱的天数（越狱当天为0）。当他打算统计时，计数器上某些天数被涂掉了（用 -1 表示）。给出总天数 N 和每天记录的天数，返回 N 天中奶牛越狱次数可能的最小值和最大值，若记录的天数有矛盾的地方，返回 -1</p>
