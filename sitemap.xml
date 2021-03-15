@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.affu.xyz/2020/11/12/2016%20Bronze%20Open%20Contest%20p1/</loc>
+    
+    <lastmod>2021-01-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.affu.xyz/2020/11/12/2016%20Bronze%20February%20p1/</loc>
+    
+    <lastmod>2021-01-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.affu.xyz/2020/11/12/2016%20Bronze%20January%20p3/</loc>
+    
+    <lastmod>2021-01-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.affu.xyz/2020/11/17/week4%20%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2020-11-17</lastmod>
@@ -86,27 +107,6 @@
   </url>
   
   <url>
-    <loc>http://www.affu.xyz/2020/11/12/2016%20Bronze%20Open%20Contest%20p1/</loc>
-    
-    <lastmod>2020-11-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.affu.xyz/2020/11/12/2016%20Bronze%20January%20p3/</loc>
-    
-    <lastmod>2020-11-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.affu.xyz/2020/11/12/2016%20Bronze%20February%20p1/</loc>
-    
-    <lastmod>2020-11-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.affu.xyz/categories/index.html</loc>
     
     <lastmod>2020-11-12</lastmod>
@@ -130,7 +130,7 @@
 
   <url>
     <loc>http://www.affu.xyz/</loc>
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -140,35 +140,35 @@
   
   <url>
     <loc>http://www.affu.xyz/categories/CS/</loc>
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.affu.xyz/categories/CS/USACO/</loc>
-    <lastmod>2021-01-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.affu.xyz/categories/CS/USACO/Bronze/</loc>
-    <lastmod>2021-01-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.affu.xyz/categories/CS/USACO/Silver/</loc>
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.affu.xyz/categories/CS/Bitcoin/</loc>
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-03-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.affu.xyz/categories/CS/USACO/Bronze/</loc>
+    <lastmod>2021-03-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.affu.xyz/categories/CS/USACO/Silver/</loc>
+    <lastmod>2021-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
