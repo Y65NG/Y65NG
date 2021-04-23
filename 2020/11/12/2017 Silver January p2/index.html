@@ -112,42 +112,7 @@
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Famer John 和 Bessie 猜拳。在 $n$ 次猜拳中 ($1 ≤ n ≤ 100000$)，Bessie 只会变一次手势，给出 Farmer John 每次出的手势，求 Bessie 能赢的最大次数</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>将 FJ 每次出的手势装进一个 prefix 数组中，数组的每个元素是当前 FJ 出过三个手势分别的次数。遍历装 FJ 手势的数组，计算每次 Bessie 赢的次数，并求出最大值</p>
 <h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>创建一个 prefix 数组的复杂度为 $O(n)$，遍历数组的复杂度为 $O(n)$，利用 prefix 计算赢的次数的复杂度为 $O(1)$，总复杂度为 $O(n)$，$n$ 最大为 100000，不会超时</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="lang-python">def win(a, b, i):
-    global gestures, prefix
-
-    count = 0
-    count += prefix[i][a] + prefix[-1][b] - prefix[i][b]
-    return count
-
-lines = open(&#39;hps.in&#39;).read().strip().split(&#39;\n&#39;)
-n = int(lines[0])
-gestures = lines[1:]
-prefix = []
-for i in range(n):
-    if i == 0:
-        if gestures[i] == &#39;H&#39;: prefix.append((1,0,0))
-        elif gestures[i] == &#39;P&#39;: prefix.append((0, 1, 0))
-        else: prefix.append((0,0,1))
-    else:
-        h = prefix[i - 1][0]
-        p = prefix[i - 1][1]
-        s = prefix[i - 1][2]
-        if gestures[i] == &#39;H&#39;: prefix.append((h + 1, p, s))
-        elif gestures[i] == &#39;P&#39;: prefix.append((h, p + 1, s))
-        else: prefix.append((h, p, s + 1))
-# print(gestures, prefix)
-
-max_count = 0
-for i in range(n):
-    count = max(win(0, 1, i), win(0, 2, i), win(1, 0, i), win(1, 2, i), win(2, 0, i), win(2, 1, i))
-    max_count = max(max_count, count)
-
-print(max_count)
-file = open(&#39;hps.out&#39;, &#39;w&#39;)
-file.write(str(max_count))
-file.close()
-</code></pre>
-
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">win</span>(<span class="params">a, b, i</span>):</span></span><br><span class="line">	<span class="keyword">global</span> gestures, prefix</span><br><span class="line"></span><br><span class="line">	count = <span class="number">0</span></span><br><span class="line">	count += prefix[i][a] + prefix[<span class="number">-1</span>][b] - prefix[i][b]</span><br><span class="line">	<span class="keyword">return</span> count</span><br><span class="line"></span><br><span class="line">lines = <span class="built_in">open</span>(<span class="string">&#x27;hps.in&#x27;</span>).read().strip().split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">n = <span class="built_in">int</span>(lines[<span class="number">0</span>])</span><br><span class="line">gestures = lines[<span class="number">1</span>:]</span><br><span class="line">prefix = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">	<span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">		<span class="keyword">if</span> gestures[i] == <span class="string">&#x27;H&#x27;</span>: prefix.append((<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">		<span class="keyword">elif</span> gestures[i] == <span class="string">&#x27;P&#x27;</span>: prefix.append((<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line">		<span class="keyword">else</span>: prefix.append((<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>))</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		h = prefix[i - <span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">		p = prefix[i - <span class="number">1</span>][<span class="number">1</span>]</span><br><span class="line">		s = prefix[i - <span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line">		<span class="keyword">if</span> gestures[i] == <span class="string">&#x27;H&#x27;</span>: prefix.append((h + <span class="number">1</span>, p, s))</span><br><span class="line">		<span class="keyword">elif</span> gestures[i] == <span class="string">&#x27;P&#x27;</span>: prefix.append((h, p + <span class="number">1</span>, s))</span><br><span class="line">		<span class="keyword">else</span>: prefix.append((h, p, s + <span class="number">1</span>))</span><br><span class="line"><span class="comment"># print(gestures, prefix)</span></span><br><span class="line"></span><br><span class="line">max_count = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">	count = <span class="built_in">max</span>(win(<span class="number">0</span>, <span class="number">1</span>, i), win(<span class="number">0</span>, <span class="number">2</span>, i), win(<span class="number">1</span>, <span class="number">0</span>, i), win(<span class="number">1</span>, <span class="number">2</span>, i), win(<span class="number">2</span>, <span class="number">0</span>, i), win(<span class="number">2</span>, <span class="number">1</span>, i))</span><br><span class="line">	max_count = <span class="built_in">max</span>(max_count, count)</span><br><span class="line">	</span><br><span class="line">print(max_count)</span><br><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;hps.out&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">file.write(<span class="built_in">str</span>(max_count))</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
 
 <div class="article-footer fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>

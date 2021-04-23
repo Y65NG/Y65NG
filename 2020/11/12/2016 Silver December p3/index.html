@@ -112,52 +112,7 @@
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>一共有 $n$ 头奶牛，每头奶牛站在不同的位置 $(x, y)$，并拥有一个广播半径为 $p$ 的对讲机（每只奶牛的 $p$ 不一定相同）。求从某只奶牛开始能联系到最多的奶牛数是多少（单向）</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>将奶牛坐标装进一个数组中，将每只奶牛的 $p$ 装进另一个 $index$ 都一一对应的数组。遍历装坐标的数组，利用递归计算当前奶牛能联系到的所有奶牛数，并得出最大值</p>
 <h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><p>遍历长度为 $n$ 数组的复杂度为 $O(n)$，其中每个元素递归最坏的复杂度也为 $O(n)$，总复杂度为 $O(n^2)$。$n$ 最大为 200，不会超时</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="lang-python">def distance(p1, p2):
-    return ((p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2) ** 0.5
-
-def neighbors(pos):
-    global poses, powers
-
-    result = set()
-    for i in range(len(poses)):
-        if i == pos: continue
-        if distance(poses[pos], poses[i]) &lt;= powers[pos]: result.add(i)
-    return result
-
-def process(pos):
-    global poses, visited
-
-    visited.add(pos)
-    neighbor_pos = neighbors(pos)
-    #print(neighbor_pos)
-    if len(neighbor_pos) == 0: return
-    for neighbor in neighbor_pos:
-        if neighbor not in visited: process(neighbor)
-
-lines = open(&#39;moocast.in&#39;).read().strip().split(&#39;\n&#39;)
-n = int(lines[0])
-poses = []
-powers = []
-
-for i in range(1, n + 1):
-    line = list(map(int, lines[i].split(&#39; &#39;)))
-    pos = (line[0], line[1])
-    power = line[2]
-    poses.append(pos)
-    powers.append(power)
-
-max_size = 0
-for i in range(len(poses)):
-    visited = set()
-    process(i)
-    max_size = max(len(visited), max_size)
-
-print(max_size)
-file = open(&#39;moocast.out&#39;, &#39;w&#39;)
-file.write(str(max_size))
-file.close()
-</code></pre>
-
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">distance</span>(<span class="params">p1, p2</span>):</span></span><br><span class="line">	<span class="keyword">return</span> ((p2[<span class="number">0</span>] - p1[<span class="number">0</span>]) ** <span class="number">2</span> + (p2[<span class="number">1</span>] - p1[<span class="number">1</span>]) ** <span class="number">2</span>) ** <span class="number">0.5</span></span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">neighbors</span>(<span class="params">pos</span>):</span></span><br><span class="line">	<span class="keyword">global</span> poses, powers</span><br><span class="line">	</span><br><span class="line">	result = <span class="built_in">set</span>()</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(poses)):</span><br><span class="line">		<span class="keyword">if</span> i == pos: <span class="keyword">continue</span></span><br><span class="line">		<span class="keyword">if</span> distance(poses[pos], poses[i]) &lt;= powers[pos]: result.add(i)</span><br><span class="line">	<span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span>(<span class="params">pos</span>):</span></span><br><span class="line">	<span class="keyword">global</span> poses, visited</span><br><span class="line">	</span><br><span class="line">	visited.add(pos)</span><br><span class="line">	neighbor_pos = neighbors(pos)</span><br><span class="line">	<span class="comment">#print(neighbor_pos)</span></span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(neighbor_pos) == <span class="number">0</span>: <span class="keyword">return</span></span><br><span class="line">	<span class="keyword">for</span> neighbor <span class="keyword">in</span> neighbor_pos:</span><br><span class="line">		<span class="keyword">if</span> neighbor <span class="keyword">not</span> <span class="keyword">in</span> visited: process(neighbor)</span><br><span class="line"></span><br><span class="line">lines = <span class="built_in">open</span>(<span class="string">&#x27;moocast.in&#x27;</span>).read().strip().split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">n = <span class="built_in">int</span>(lines[<span class="number">0</span>])</span><br><span class="line">poses = []</span><br><span class="line">powers = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">	line = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, lines[i].split(<span class="string">&#x27; &#x27;</span>)))</span><br><span class="line">	pos = (line[<span class="number">0</span>], line[<span class="number">1</span>])</span><br><span class="line">	power = line[<span class="number">2</span>]</span><br><span class="line">	poses.append(pos)</span><br><span class="line">	powers.append(power)</span><br><span class="line"></span><br><span class="line">max_size = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(poses)):</span><br><span class="line">	visited = <span class="built_in">set</span>()</span><br><span class="line">	process(i)</span><br><span class="line">	max_size = <span class="built_in">max</span>(<span class="built_in">len</span>(visited), max_size)</span><br><span class="line"></span><br><span class="line">print(max_size)</span><br><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;moocast.out&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">file.write(<span class="built_in">str</span>(max_size))</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
 
 <div class="article-footer fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>
