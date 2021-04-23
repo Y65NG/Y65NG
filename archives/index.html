@@ -1,49 +1,527 @@
-.l_body {
-  display: flex;
-  margin: auto;
-  padding: 0 var(--gap-l);
-  justify-content: center;
-}
-.l_body .l_left {
-  z-index: 8;
-  width: var(--width-left);
-  flex-shrink: 0;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-.l_body .l_main {
-  flex-shrink: 1;
-  flex-grow: 1;
-  width: 320px;
-  max-width: var(--width-main);
-}
-.l_body.mobile.sidebar .sidebar-toggle.mobile {
-  background: $color-hover;
-  color: #fff;
-}
-@media screen and (max-width: $device-tablet) {
-  .mobile-only {
-    display: block !important;
+<!DOCTYPE html>
+<html lang='zh-Hans'>
+
+<head>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,follow">
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Archives - Yang's Website</title>
+
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Archives">
+<meta property="og:url" content="http://y65ng.gitee.io/archives/index.html">
+<meta property="og:site_name" content="Yang&#39;s Website">
+<meta property="og:locale">
+<meta property="article:author" content="Daniel Yang">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/y65ng/css/main.css">
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left'>
+    
+
+<header class='header'>
+  <div class='logo-wrap'>
+  
+    <a class='avatar' href='/y65ng/about/'>
+      
+        <img no-lazy class='bg' src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp'/>
+      
+      <img no-lazy class='avatar' src='头像'/>
+    </a>
+  
+  
+    <a class='title' href='/y65ng/'>
+      Yang's Website
+    </a>
+  
+</div>
+
+  <nav class="menu dis-select"><a class="nav-item" href="/y65ng/archives/">archives</a></nav>
+</header>
+
+<div class='widgets'>
+  
+    
+      
+      <div class='widget-wrap' id='markdown'>
+  <div class='widget-header h4 dis-select'>
+    <span class='name'>欢迎</span>
+  </div>
+  <div class='widget-body fs14'>
+    
+      <p>欢迎光临小站，<a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/">Stellar</a> 是一个支持 wiki 的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。</p>
+
+    
+  </div>
+</div>
+
+    
+  
+    
+      
+      
+<div class="widget-wrap" id="recent"><div class="widget-header h4 dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><div class="post-title reveal"><div class="cap"><time>2021-04-14</time></div><a href="/y65ng/2020/11/13/Welcome-to-Yang-s-Website/">Welcome to Yang's Website</a></div><div class="post-title reveal"><div class="cap"><time>2021-01-01</time></div><a href="/y65ng/2020/11/12/2016%20Bronze%20Open%20Contest%20p1/">2016 Bronze Open Contest p1</a></div><div class="post-title reveal"><div class="cap"><time>2021-01-01</time></div><a href="/y65ng/2020/11/12/2016%20Bronze%20February%20p1/">2016 Bronze February p1</a></div><div class="post-title reveal"><div class="cap"><time>2021-01-01</time></div><a href="/y65ng/2020/11/12/2016%20Bronze%20January%20p3/">2016 Bronze January p3</a></div><div class="post-title reveal"><div class="cap"><time>2020-11-17</time></div><a href="/y65ng/2020/11/17/week4%20%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">Week4 Note</a></div></div></div>
+
+    
+  
+</div>
+
+
+    </aside>
+    <div class='l_main list'>
+      
+  
+<header class='header mobile-only'>
+  <div class='logo-wrap'>
+  
+    <a class='avatar' href='/y65ng/about/'>
+      
+        <img no-lazy class='bg' src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp'/>
+      
+      <img no-lazy class='avatar' src='头像'/>
+    </a>
+  
+  
+    <a class='title' href='/y65ng/'>
+      Yang's Website
+    </a>
+  
+</div>
+
+  <nav class="menu dis-select"><a class="nav-item" href="/y65ng/archives/">archives</a></nav>
+</header>
+
+
+
+      
+
+  
+  <div class='nav-wrap'>
+  <nav class='sub post cap'>
+    
+      <a href='/'>Recent</a>
+    
+    
+      
+        <a href='/y65ng/categories'>Categories</a>
+      
+    
+    
+    
+      
+        <a class='active' href='/y65ng/archives'>Archives</a>
+      
+    
+  </nav>
+</div>
+
+  <div class='post-list'>
+  	
+  	
+  		
+  		
+  			
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+  		
+  		
+  	
+    <h1 class='list-title h4'>Yang's Website in 1 years wrote 13 articles</h1>
+  	
+  		<article class='post-card' id='archive'>
+  			<div class='list-title h4'>2020</div>
+  			
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				
+  		    
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/17/week4%20%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">
+    					<time>11-17</time>
+    					<span>
+                
+      						Week4 Note
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/13/Welcome-to-Yang-s-Website/">
+    					<time>11-13</time>
+    					<span>
+                
+      						Welcome to Yang's Website
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2018%20Bronze%20February%20p3/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2018 Bronze February p3
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2018%20Bronze%20February%20p2/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2018 Bronze February p2
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2017%20Silver%20January%20p2/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2017 Silver January p2
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2017%20Bronze%20December%20p3/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2017 Bronze December p3
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2016%20Silver%20January%20p1/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2016 Silver January p1
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2016%20Silver%20December%20p3/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2016 Silver December p3
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2016%20Silver%20December%20p2/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2016 Silver December p2
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2016%20Silver%20December%20p1/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2016 Silver December p1
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2016%20Bronze%20Open%20Contest%20p1/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2016 Bronze Open Contest p1
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2016%20Bronze%20January%20p3/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2016 Bronze January p3
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div>
+            <a class='post fs14' href="/y65ng/2020/11/12/2016%20Bronze%20February%20p1/">
+    					<time>11-12</time>
+    					<span>
+                
+      						2016 Bronze February p1
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  		</article>
+  	
+  </div>
+
+
+      
+<footer class="page-footer fs12"><hr><div><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://y65ng.gitee.io/y65ng/">@Daniel Yang</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.1.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" viewBox="0 0 1228 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2849"><path d="M0 0m97.390199 0l973.901995 0q97.390199 0 97.390199 97.390199l0 0q0 97.390199-97.390199 97.3902l-973.901995 0q-97.390199 0-97.390199-97.3902l0 0q0-97.390199 97.390199-97.390199Z" p-id="2850"></path><path d="M0 389.560798m97.390199 0l973.901995 0q97.390199 0 97.390199 97.390199l0 0q0 97.390199-97.390199 97.3902l-973.901995 0q-97.390199 0-97.390199-97.3902l0 0q0-97.390199 97.390199-97.390199Z" p-id="2851"></path><path d="M0 779.121596m97.390199 0l973.901995 0q97.390199 0 97.390199 97.390199l0 0q0 97.390199-97.390199 97.390199l-973.901995 0q-97.390199 0-97.390199-97.390199l0 0q0-97.390199 97.390199-97.390199Z" p-id="2852"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script')
+      script.src = src
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.1.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/y65ng/js/plugins/sites.js',
+    friendsjs: '/y65ng/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
   }
-  .l_body {
-    padding: 0;
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
   }
-  .l_body .l_left {
-    position: fixed;
-    transform: translateX(-320px);
-    margin: 0;
-    left: 0;
-    background: var(--site-bg);
-    box-shadow: $boxshadow-card-float;
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
   }
-  .l_body .l_main {
-    max-width: 100%;
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
   }
-  .l_body.mobile .l_left {
-    transition: transform 0.3s ease-out;
-  }
-  .l_body.mobile.sidebar .l_left {
-    transform: translateX(0px);
-  }
-}
+</script>
+
+<!-- required -->
+
+  
+<script src="/y65ng/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
